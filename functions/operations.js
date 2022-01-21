@@ -7,16 +7,15 @@ module.exports = {
 
         try {
 
-            results=Incident.findAll({
+            Incident.findAll({
                 attributes: ['client_id', 'incident_desc', 'city', 'country', 'weather_report', 'createdAt']
+            }).then((incidents) => {
+                resolve(incidents);
             }).catch((error) => {
                 console.log('error in query', {error});
                 throw error;
             });
-
-            // console.log(JSON.stringify(results))
-            resolve(results);
-
+            
         } catch (error) {
             throw error;
         }
@@ -27,18 +26,17 @@ module.exports = {
 
         try {
 
-            results=Incident.findAll({
+            Incident.findAll({
                 attributes: ['client_id', 'incident_desc', 'city', 'country', 'weather_report', 'createdAt'],
                 where: {
                     client_id: client_id
                 }
+            }).then((incidents) => {
+                resolve(incidents);
             }).catch((error) => {
                 console.log('error in query', {error});
                 throw error;
             });
-
-            // console.log(JSON.stringify(results))
-            resolve(results);
 
         } catch (error) {
             throw error;

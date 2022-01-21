@@ -10,9 +10,8 @@ module.exports = {
     ProcessGetIncidents: (req, res) => {
 
         getAllIncidents().then( incident_reports => {
-            console.log(incident_reports)
 
-            if (incident_reports) {
+            if (incident_reports.length > 0) {
                 res.json({
                     resp_code: constants.INCIDENTS_FOUND_RESP_CODE,
                     resp_desc: constants.INCIDENTS_FOUND_RESP_DESC,
@@ -36,9 +35,8 @@ module.exports = {
         const client_id = req.params.client_id
 
         getClientIncidents(client_id).then( incident_reports => {
-            console.log(incident_reports)
 
-            if (incident_reports) {
+            if (incident_reports.length > 0) {
                 res.json({
                     resp_code: constants.INCIDENTS_FOUND_RESP_CODE,
                     resp_desc: constants.INCIDENTS_FOUND_RESP_DESC,
