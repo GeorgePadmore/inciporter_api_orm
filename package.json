@@ -1,0 +1,44 @@
+{
+  "name": "inciporter_api_orm",
+  "version": "1.0.0",
+  "description": "Takes, processes and list incident reports submitted by clients - another version of incident_reporting_api but with an ORM(Sequelize) instead of raw sql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgePadmore/inciporter_api_orm.git"
+  },
+  "keywords": [
+    "incident_reporting",
+    "API",
+    "nodejs",
+    "express",
+    "ORM"
+  ],
+  "author": "George Padmore Yeboah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgePadmore/inciporter_api_orm/issues"
+  },
+  "homepage": "https://github.com/GeorgePadmore/inciporter_api_orm#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "fs": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "request-ip": "^2.1.3",
+    "sequelize": "^6.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
+  }
+}
